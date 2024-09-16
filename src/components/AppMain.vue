@@ -26,12 +26,12 @@ export default {
 </script>
 
 <template>
-  <main>
+   <main>
     <div class="content container">
-      <button class="btn btn-primary my-3" @click="generateCuriosity">
+      <button class="btn my-3" @click="generateCuriosity">
         Curiosità su DC
       </button>
-      <p class="curiosity-text mt-4" v-if="selectedCuriosity">{{ selectedCuriosity }}</p>
+        <p class="curiosity-text mt-4" v-if="selectedCuriosity">{{ selectedCuriosity }}</p>
     </div>
   </main>
 </template>
@@ -48,6 +48,18 @@ main {
 
 .content {
   font-size: 20px;
+  button {
+    border-color: variables.$primary-color;
+    color: variables.$title-color;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: variables.$background-color;
+      color: variables.$primary-color;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.6);
+    }
+  }
 }
 
 .curiosity-text {
@@ -56,4 +68,5 @@ main {
   margin-top: variables.$margin-base;
   color: variables.$primary-color;
 }
+
 </style>

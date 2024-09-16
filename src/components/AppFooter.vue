@@ -48,7 +48,7 @@ export default {
     <div class="bottom-footer">
       <div class="container d-flex justify-content-between">
       <div class="sign-up text-center my-3">
-        <button id="join-us" class="btn text-white">SIGN-UP NOW!</button>
+        <button id="join-us" class="btn">SIGN-UP NOW!</button>
       </div>
 
       <div class="social-media d-flex align-items-center gap-4">
@@ -103,6 +103,10 @@ export default {
       color: variables.$secondary-color;
       text-shadow: 0 2px 2px black;
       cursor: pointer;
+      &:hover {
+      color: variables.$primary-color;
+      transform: scale(1.05);
+    }
     }
   }
   
@@ -115,10 +119,24 @@ export default {
   
   .social-icons {
     cursor: pointer;
+    img:hover {
+      color: variables.$primary-color;
+      transform: scale(1.1);
+    }
   }
+
+
 
   #join-us {
     border-color: variables.$primary-color;
+    color: variables.$title-color;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    &:hover {
+      background-color: variables.$background-color;
+      color: variables.$primary-color;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.6);
+    }
   }
   </style>
   
