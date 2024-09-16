@@ -45,7 +45,8 @@ export default {
         </div>
       </div>
     </div>
-    <div class="bottom-footer container d-flex justify-content-between">
+    <div class="bottom-footer">
+      <div class="container d-flex justify-content-between">
       <div class="sign-up text-center my-3">
         <button id="join-us" class="btn text-white">SIGN-UP NOW!</button>
       </div>
@@ -60,6 +61,7 @@ export default {
           <img src="../assets/img/footer-periscope.png" alt="Periscope">
         </div>
       </div>
+    </div>
     </div>
   </footer>
 </template>
@@ -105,7 +107,7 @@ export default {
   }
   
   .footer-image img {
-    min-width: 30%;
+    min-width: 25%;
     position: absolute;
     bottom: 40px;
     right: 135px;
