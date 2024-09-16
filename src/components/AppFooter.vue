@@ -67,12 +67,17 @@ export default {
   <style scoped lang="scss">
     @use '../../style/variables';
     footer {
-        background-color: variables.$footer-background-color;
         color: variables.$secondary-color;
+        background-color: variables.$footer-background-color;
     }
 
   .bottom-footer {
     color: variables.$primary-color;
+    background-color: variables.$footer-background-color;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
   }
   
   .top-footer {
@@ -81,6 +86,8 @@ export default {
   }
   
   .footer-lists {
+    position: relative;
+    z-index: 1;
     h4 {
       margin-bottom: 10px;
     }
@@ -92,13 +99,16 @@ export default {
     li {
       margin-bottom: 5px;
       color: variables.$secondary-color;
+      text-shadow: 0 2px 2px black;
       cursor: pointer;
     }
   }
   
   .footer-image img {
-    width: 80%;
-    overflow: hidden;
+    min-width: 30%;
+    position: absolute;
+    bottom: 40px;
+    right: 135px;
   }
   
   .social-icons {

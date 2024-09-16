@@ -15,9 +15,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
     font-family: variables.$font-family-condensed;
     color: variables.$title-color;
 }
@@ -26,7 +24,7 @@ button {
     font-family: variables.$font-family-main;
     padding: variables.$padding-base variables.$margin-base;
     background-color: variables.$primary-color;
-    color: white;
+    color: variables.$title-color;
     border: none;
     cursor: pointer;
 }
