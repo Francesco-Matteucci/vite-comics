@@ -3,6 +3,26 @@ export default {
   data() {
     return {
       name: 'AppHeader',
+      navItems: [
+        { name: 'Characters', active: false },
+        { name: 'Comics', active: true },
+        { name: 'Movies', active: false },
+        { name: 'TV', active: false },
+        { name: 'Games', active: false },
+        { name: 'Collectibles', active: false },
+        { name: 'Videos', active: false },
+        { name: 'Fans', active: false },
+        { name: 'News', active: false },
+        { name: 'Shop', active: false }
+      ]
+    }
+  },
+  methods: {
+    setActive(index) {
+      this.navItems.forEach((item, i) => {
+        // Imposto l'item attivo in base all'indice
+        item.active = i === index;
+      });
     }
   }
 }
@@ -16,17 +36,10 @@ export default {
         </div>
         <nav class="col-10">
           <ul class="nav-menu list-inline d-flex justify-content-end gap-3">
-            <li>Characters</li>
-            <li>Comics</li>
-            <li>Movies</li>
-            <li>TV</li>
-            <li>Games</li>
-            <li>Collectibles</li>
-            <li>Videos</li>
-            <li>Fans</li>
-            <li>News</li>
-            <li>Shop</li>
-          </ul>
+            <li v-for="(item, index) in navItems" :key="index"  :class="{ active: item.active }" @click="setActive(index)">
+            {{ item.name }}
+            </li>
+        </ul>
         </nav>
       </div>
     </header>
@@ -46,5 +59,8 @@ export default {
     cursor: pointer;
     font-weight: bold;
     color: #000;
-  }
+}
+li.active {
+    color: #007bff;
+}
   </style>
