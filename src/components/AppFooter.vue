@@ -5,7 +5,7 @@ export default {
       name: 'AppFooter',
       footerSections: [
         {
-          title: 'DC COMICS',
+          title: 'DC COMICS', 
           items: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
         },
         {
@@ -47,7 +47,7 @@ export default {
     </div>
     <div class="bottom-footer container d-flex justify-content-between">
       <div class="sign-up text-center my-3">
-        <button class="btn btn-primary">SIGN-UP NOW!</button>
+        <button id="join-us" class="btn text-white">SIGN-UP NOW!</button>
       </div>
 
       <div class="social-media d-flex align-items-center gap-4">
@@ -65,13 +65,14 @@ export default {
 </template>
   
   <style scoped lang="scss">
+    @use '../../style/variables';
     footer {
-        background-color: #222;
-        color: #fff;
+        background-color: variables.$footer-background-color;
+        color: variables.$secondary-color;
     }
 
   .bottom-footer {
-    color: #007bff;
+    color: variables.$primary-color;
   }
   
   .top-footer {
@@ -90,7 +91,7 @@ export default {
     }
     li {
       margin-bottom: 5px;
-      color: #7D8181;
+      color: variables.$secondary-color;
       cursor: pointer;
     }
   }
@@ -102,6 +103,10 @@ export default {
   
   .social-icons {
     cursor: pointer;
+  }
+
+  #join-us {
+    border-color: variables.$primary-color;
   }
   </style>
   

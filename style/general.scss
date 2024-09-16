@@ -1,10 +1,32 @@
+// Import variables
+@use '../style/variables' as variables;
+;
+
+// Importa Bp
+@import 'bootstrap/scss/bootstrap';
+
+// Global Styles
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: variables.$font-family-main;
+    background-color: variables.$background-color;
+    color: variables.$secondary-color;
 }
 
 h1,
 h2,
 h3,
-h4 {
-    font-family: 'Open Sans Condensed', sans-serif;
+h4,
+h5,
+h6 {
+    font-family: variables.$font-family-condensed;
+    color: variables.$title-color;
+}
+
+button {
+    font-family: variables.$font-family-main;
+    padding: variables.$padding-base variables.$margin-base;
+    background-color: variables.$primary-color;
+    color: white;
+    border: none;
+    cursor: pointer;
 }

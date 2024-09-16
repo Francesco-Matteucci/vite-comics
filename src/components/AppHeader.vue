@@ -46,21 +46,24 @@ export default {
   </template>
   
   <style scoped lang="scss">
-  header {
-    padding: 10px 0;
-    background-color: #fff;
-  }
-  
-  .logo img {
-    height: 80px;
-  }
-  
-  .nav-menu li {
-    cursor: pointer;
-    font-weight: bold;
-    color: #000;
+@use '../../style/_variables.scss' as variables;
+
+header {
+  padding: 10px 0;
+  background-color: variables.$background-color;
 }
-li.active {
-    color: #007bff;
+
+.logo img {
+  height: 80px;
 }
-  </style>
+
+.nav-menu li {
+  cursor: pointer;
+  font-weight: bold;
+  color: variables.$third-color;
+}
+
+.nav-menu li.active {
+  color: variables.$primary-color;
+}
+</style>

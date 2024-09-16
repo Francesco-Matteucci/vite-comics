@@ -17,10 +17,11 @@ export default {
 </template>
   
 <style scoped lang="scss">
+@use '../../style/_variables.scss' as variables;
   main {
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: variables.$footer-background-color;
+  color: variables.$background-color;
     text-align: center;
   }
   
