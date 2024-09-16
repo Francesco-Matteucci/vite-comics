@@ -1,69 +1,69 @@
 <script>
-export default {
-  data() {
-    return {
-      name: 'AppHeader',
-      navItems: [
-        { name: 'Characters', active: false },
-        { name: 'Comics', active: true },
-        { name: 'Movies', active: false },
-        { name: 'TV', active: false },
-        { name: 'Games', active: false },
-        { name: 'Collectibles', active: false },
-        { name: 'Videos', active: false },
-        { name: 'Fans', active: false },
-        { name: 'News', active: false },
-        { name: 'Shop', active: false }
-      ]
-    }
-  },
-  methods: {
-    setActive(index) {
-      this.navItems.forEach((item, i) => {
-        // Imposto l'item attivo in base all'indice
-        item.active = i === index;
-      });
+  export default {
+    data() {
+      return {
+        name: 'AppHeader',
+        navItems: [
+          { name: 'Characters', active: false },
+          { name: 'Comics', active: true },
+          { name: 'Movies', active: false },
+          { name: 'TV', active: false },
+          { name: 'Games', active: false },
+          { name: 'Collectibles', active: false },
+          { name: 'Videos', active: false },
+          { name: 'Fans', active: false },
+          { name: 'News', active: false },
+          { name: 'Shop', active: false }
+        ]
+      }
+    },
+    methods: {
+      setActive(index) {
+        this.navItems.forEach((item, i) => {
+          // Imposto l'item attivo in base all'indice
+          item.active = i === index;
+        });
+      }
     }
   }
-}
 </script>
 
 <template>
-    <header>
-      <div class="d-flex justify-content-center align-items-center container">
-        <div class="col-2 logo">
-          <img src="../assets/img/dc-logo.png" alt="Logo DC">
-        </div>
-        <nav class="col-10">
-          <ul class="nav-menu list-inline d-flex justify-content-end gap-3">
-            <li v-for="(item, index) in navItems" :key="index"  :class="{ active: item.active }" @click="setActive(index)">
-            {{ item.name }}
-            </li>
-        </ul>
-        </nav>
+  <header>
+    <div class="d-flex justify-content-center align-items-center container">
+      <div class="col-2 logo">
+        <img src="../assets/img/dc-logo.png" alt="Logo DC">
       </div>
-    </header>
-  </template>
-  
-  <style scoped lang="scss">
-@use '../../style/_variables.scss' as variables;
+      <nav class="col-10">
+        <ul class="nav-menu list-inline d-flex justify-content-end gap-3">
+          <li v-for="(item, index) in navItems" :key="index" :class="{ active: item.active }" @click="setActive(index)">
+            {{ item.name }}
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</template>
 
-header {
-  padding: 10px 0;
-  background-color: variables.$background-color;
-}
+<style scoped lang="scss">
+  @use '../../style/_variables.scss' as variables;
 
-.logo img {
-  height: 80px;
-}
+  header {
+    padding: 10px 0;
+    background-color: variables.$background-color;
+  }
 
-.nav-menu li {
-  cursor: pointer;
-  font-weight: bold;
-  color: variables.$third-color;
-}
+  .logo img {
+    height: 80px;
+  }
 
-.nav-menu li.active {
-  color: variables.$primary-color;
-}
+  .nav-menu li {
+    cursor: pointer;
+    font-weight: bold;
+    color: variables.$third-color;
+  }
+
+  .nav-menu li.active {
+    color: variables.$primary-color;
+  }
 </style>

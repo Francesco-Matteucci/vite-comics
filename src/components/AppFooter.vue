@@ -1,29 +1,29 @@
 <script>
-export default {
-  data() {
-    return {
-      name: 'AppFooter',
-      footerSections: [
-        {
-          title: 'DC COMICS', 
-          items: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
-        },
-        {
-          title: 'SHOP',
-          items: ['Shop DC', 'Shop DC Collectibles']
-        },
-        {
-          title: 'DC',
-          items: ['Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
-        },
-        {
-          title: 'SITES',
-          items: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
-        }
-      ]
+  export default {
+    data() {
+      return {
+        name: 'AppFooter',
+        footerSections: [
+          {
+            title: 'DC COMICS',
+            items: ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+          },
+          {
+            title: 'SHOP',
+            items: ['Shop DC', 'Shop DC Collectibles']
+          },
+          {
+            title: 'DC',
+            items: ['Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+          },
+          {
+            title: 'SITES',
+            items: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <template>
@@ -47,31 +47,32 @@ export default {
     </div>
     <div class="bottom-footer">
       <div class="container d-flex justify-content-between">
-      <div class="sign-up text-center my-3">
-        <button id="join-us" class="btn">SIGN-UP NOW!</button>
-      </div>
+        <div class="sign-up text-center my-3">
+          <button id="join-us" class="btn">SIGN-UP NOW!</button>
+        </div>
 
-      <div class="social-media d-flex align-items-center gap-4">
-        <p class="mb-0">FOLLOW US</p>
-        <div class="social-icons d-flex justify-content-center gap-3">
-          <img src="../assets/img/footer-facebook.png" alt="Facebook">
-          <img src="../assets/img/footer-twitter.png" alt="Twitter">
-          <img src="../assets/img/footer-youtube.png" alt="Youtube">
-          <img src="../assets/img/footer-pinterest.png" alt="Pinterest">
-          <img src="../assets/img/footer-periscope.png" alt="Periscope">
+        <div class="social-media d-flex align-items-center gap-4">
+          <p class="mb-0">FOLLOW US</p>
+          <div class="social-icons d-flex justify-content-center gap-3">
+            <img src="../assets/img/footer-facebook.png" alt="Facebook">
+            <img src="../assets/img/footer-twitter.png" alt="Twitter">
+            <img src="../assets/img/footer-youtube.png" alt="Youtube">
+            <img src="../assets/img/footer-pinterest.png" alt="Pinterest">
+            <img src="../assets/img/footer-periscope.png" alt="Periscope">
+          </div>
         </div>
       </div>
     </div>
-    </div>
   </footer>
 </template>
-  
-  <style scoped lang="scss">
-    @use '../../style/variables';
-    footer {
-        color: variables.$secondary-color;
-        background-color: variables.$footer-background-color;
-    }
+
+<style scoped lang="scss">
+  @use '../../style/variables';
+
+  footer {
+    color: variables.$secondary-color;
+    background-color: variables.$footer-background-color;
+  }
 
   .bottom-footer {
     color: variables.$primary-color;
@@ -81,44 +82,49 @@ export default {
     right: 0;
     z-index: 2;
   }
-  
+
   .top-footer {
     padding: 20px;
     background-image: url(../assets/img/footer-bg.jpg);
   }
-  
+
   .footer-lists {
     position: relative;
     z-index: 1;
+
     h4 {
       margin-bottom: 10px;
     }
+
     ul {
       list-style: none;
       padding: 0;
       margin-bottom: 20px;
     }
+
     li {
       margin-bottom: 5px;
       color: variables.$secondary-color;
       text-shadow: 0 2px 2px black;
       cursor: pointer;
+
       &:hover {
-      color: variables.$primary-color;
-      transform: scale(1.05);
-    }
+        color: variables.$primary-color;
+        transform: scale(1.05);
+      }
     }
   }
-  
+
   .footer-image img {
     max-width: 35%;
     position: absolute;
     bottom: 40px;
     right: 135px;
   }
-  
+
   .social-icons {
     cursor: pointer;
+
     img:hover {
       color: variables.$primary-color;
       transform: scale(1.1);
@@ -131,6 +137,7 @@ export default {
     border-color: variables.$primary-color;
     color: variables.$title-color;
     transition: background-color 0.3s ease, transform 0.3s ease;
+
     &:hover {
       background-color: variables.$background-color;
       color: variables.$primary-color;
@@ -138,5 +145,4 @@ export default {
       box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.6);
     }
   }
-  </style>
-  
+</style>
