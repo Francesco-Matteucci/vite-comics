@@ -107,7 +107,7 @@ export default {
   }
   
   .footer-image img {
-    min-width: 25%;
+    max-width: 35%;
     position: absolute;
     bottom: 40px;
     right: 135px;
