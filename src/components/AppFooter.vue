@@ -88,38 +88,32 @@
     background-image: url(../assets/img/footer-bg.jpg);
   }
 
-  .footer-lists {
-    position: relative;
-    z-index: 1;
 
-    h4 {
-      margin-bottom: 10px;
-    }
+  h4 {
+    margin-bottom: 10px;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 20px;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
 
-    li {
-      margin-bottom: 5px;
-      color: variables.$secondary-color;
-      text-shadow: 0 2px 2px black;
-      cursor: pointer;
+  li {
+    margin-bottom: 5px;
+    color: variables.$secondary-color;
+    text-shadow: 0 2px 2px black;
+    cursor: pointer;
 
-      &:hover {
-        color: variables.$primary-color;
-        transform: scale(1.05);
-      }
+    &:hover {
+      color: variables.$primary-color;
+      transform: scale(1.05);
     }
   }
 
+
   .footer-image img {
-    max-width: 35%;
-    position: absolute;
-    bottom: 40px;
-    right: 135px;
+    width: 300px;
   }
 
   .social-icons {
