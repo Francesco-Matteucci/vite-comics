@@ -1,9 +1,16 @@
 <script>
+  import comicData from '../assets/dc-comics.json';
+  import ComicCard from './ComicCard.vue';
+
   export default {
+    components: {
+      ComicCard
+    },
     data() {
       return {
         name: 'AppMain',
-      }
+        comics: comicData
+      };
     }
   }
 </script>
@@ -11,7 +18,11 @@
 <template>
   <main>
     <div class="content container">
-      <p>Content goes here</p>
+      <div class="row">
+        <div class="col-md-2 mb-4" v-for="(comic, index) in comics" :key="index">
+          <ComicCard :comic="comic" />
+        </div>
+      </div>
     </div>
   </main>
 </template>
