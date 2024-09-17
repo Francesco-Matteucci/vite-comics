@@ -8,7 +8,7 @@
     <div class="comic-card d-flex flex-column justify-content-center align-items-center">
         <img :src="comic.thumb" :alt="comic.series" class="img-fluid" />
         <h5>{{ comic.series }}</h5>
-        <p>{{ comic.price }}</p>
+        <p class="comic-price">{{ comic.price }}</p>
     </div>
 </template>
 
@@ -19,6 +19,7 @@
         padding: 10px;
         text-align: center;
         cursor: pointer;
+        position: relative;
 
         img {
             width: 100%;
@@ -29,7 +30,6 @@
 
             &:hover {
                 transform: scale(1.05);
-
             }
         }
 
@@ -39,9 +39,15 @@
             color: variables.$title-color;
         }
 
-        p {
+        .comic-price {
             font-size: 14px;
-            color: variables.$title-color;
+            color: variables.$secondary-color;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover .comic-price {
+            opacity: 1;
         }
     }
 </style>
